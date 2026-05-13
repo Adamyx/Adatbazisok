@@ -4,6 +4,16 @@ body {
     font-family: sans-serif;
 }
 
+.logo-container {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
 a{
     color: white;
     text-decoration: none;
@@ -14,7 +24,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #2563eb;
+  background-color: #251445;
 }
 
 ul li {
@@ -30,7 +40,7 @@ ul li a {
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color: #1b0e33;
 }
 
 table {
@@ -87,3 +97,12 @@ table th, table td {
     }
 }
 
+#letolto_link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4c1d95;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

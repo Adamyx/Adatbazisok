@@ -8,6 +8,9 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <img src="MySQL.svg.png" alt="Logo" class="logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#fooldal">Főoldal</a></li>
@@ -31,42 +34,46 @@
             <h2>Táblákban alkalmazható korlátozások</h2>
             <br>
             <table>
-                <tr>
-                    <th>Korlátozás</th>
-                    <th>Leírás</th>
-                    <th>Példa</th>
-                </tr>
-                <tr>
-                    <td>PRIMARY KEY</td>
-                    <td>A PRIMARY KEY egyedi azonosítót biztosít minden rekord számára.</td>
-                    <td>diak_id: 1, 2, 3</td>
-                </tr>
-                <tr>
-                    <td>FOREIGN KEY</td>
-                    <td>Kapcsolatot hoz létre két tábla között.</td>
-                    <td>kurzus_id - diak_id</td>
-                </tr>
-                <tr>
-                    <td>UNIQUE</td>
-                    <td>Egy adott oszlopban nem lehet két azonos érték.</td>
-                    <td>email: anna@email.hu</td>
-                </tr>
-                <tr>
-                    <td>NOT NULL</td>
-                    <td>Nem enged üres értéket megadni.</td>
-                    <td>Kötelező mező</td>
-                </tr>
-                <tr>
-                    <td>DEFAULT</td>
-                    <td>Alapértelmezett értéket ad egy mezőnek.</td>
-                    <td>státusz: aktív</td>
-                </tr>
-                <tr>
-                    <td>CHECK</td>
-                    <td>Feltételt szab az adatok bevitelére.</td>
-                    <td>életkor: 18+</td>
-                </tr>
-            </table>
+  <thead>
+    <tr>
+      <th>Korlátozás</th>
+      <th>Leírás</th>
+      <th>Kódpélda</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PRIMARY KEY</td>
+      <td>A PRIMARY KEY egyedi azonosítót biztosít minden rekord számára.</td>
+      <td><code>diak_id INT PRIMARY KEY</code></td>
+    </tr>
+    <tr>
+      <td>FOREIGN KEY</td>
+      <td>Kapcsolatot hoz létre két tábla között.</td>
+      <td><code>FOREIGN KEY (diak_id) REFERENCES diakok(id)</code></td>
+    </tr>
+    <tr>
+      <td>UNIQUE</td>
+      <td>Egy adott oszlopban nem lehet két azonos érték.</td>
+      <td><code>email VARCHAR(100) UNIQUE</code></td>
+    </tr>
+    <tr>
+      <td>NOT NULL</td>
+      <td>Nem enged üres értéket megadni.</td>
+      <td><code>nev VARCHAR(50) NOT NULL</code></td>
+    </tr>
+    <tr>
+      <td>DEFAULT</td>
+      <td>Alapértelmezett értéket ad egy mezőnek.</td>
+      <td><code>statusz VARCHAR(20) DEFAULT 'aktív'</code></td>
+    </tr>
+    <tr>
+      <td>CHECK</td>
+      <td>Feltételt szab az adatok bevitelére.</td>
+      <td><code>eletkor INT CHECK (eletkor >= 18)</code></td>
+    </tr>
+  </tbody>
+</table>
         </div>
     </section>
     <section id="lekerdezesek">
@@ -77,33 +84,36 @@
                 <tr>
                     <th>Lekérdezés típusa</th>
                     <th>Leírás</th>
-                    <th>Funkció</th>
+                    <th>Kódpélda</th>
                 </tr>
                 <tr>
                     <td>INSERT</td>
                     <td>Új rekord hozzáadása az adatbázishoz.</td>
-                    <td>Adatok beszúrása</td>
+                    <td><code>INSERT INTO diakok<br>(nev, email)<br>VALUES ('Anna', 'anna@email.hu')</code></td>
                 </tr>
                 <tr>
                     <td>SELECT</td>
                     <td>Adatok lekérdezése az adatbázisból.</td>
-                    <td>Adatok megjelenítése</td>
+                    <td><code>SELECT * FROM diakok<br>WHERE eletkor > 18</code></td>
                 </tr>
                 <tr>
                     <td>UPDATE</td>
                     <td>Meglévő adatok módosítása.</td>
-                    <td>Adatok szerkesztése</td>
+                    <td><code>UPDATE diakok<br>SET nev = 'Péter'<br>WHERE id = 1</code></td>
                 </tr>
                 <tr>
                     <td>DELETE</td>
                     <td>Adatok törlése az adatbázisból.</td>
-                    <td>Adatok eltávolítása</td>
+                    <td><code>DELETE FROM diakok<br>WHERE id = 5</code></td>
                 </tr>
             </table>
         </div>
+        <div>
+            <a href="adatbazis_struktura.sql" id="letolto_link">A kódok letöltése</a>
+        </div>
     </section>
     <footer id="kapcsolat">
-        <p>Készítette: Saját Név</p>
+        <p>Készítette: Cseh Ádám és Czakó Dominik</p>
         <p>MySQL projektmunka</p>
         <p>2026</p>
     </footer>
