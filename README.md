@@ -1,1 +1,1 @@
-# Adatbazisok
+Keszitette: Cseh Ádám és Czakó Dominik
