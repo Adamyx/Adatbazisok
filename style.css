@@ -4,26 +4,6 @@ body {
     font-family: sans-serif;
 }
 
-@media (max-width: 576px) {
-    body{
-        background-color: #3b0764;
-    }
-}
-@media (min-width: 576px) and (max-width: 768px){
-    body{
-        background-color: #4c1d95;
-    }
-}
-@media (min-width:768px) and (max-width: 1024px){
-    body{
-        background-color: #581c87;
-    }
-}
-a{
-    color: white;
-    text-decoration: none;
-}
-
 a{
     color: white;
     text-decoration: none;
@@ -51,5 +31,59 @@ ul li a {
 
 ul li a:hover {
   background-color: #111111;
+}
+
+table {
+  border-collapse: collapse;
+  border: 3px solid white;
+  padding: 5px;
+  width: 100%;
+}
+
+table th, table td {
+  border: 2px solid white;
+  padding: 12px;
+}
+
+@media (max-width: 576px) {
+    body{
+        background-color: #3b0764;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid white;
+    }
+    
+    th {
+        display: none;
+    }
+    
+    tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 2px solid white;
+        padding: 10px;
+    }
+    
+    td {
+        display: block;
+        text-align: left;
+        padding: 8px 5px;
+        border: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+    body{
+        background-color: #4c1d95;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1024px){
+    body{
+        background-color: #581c87;
+    }
 }
 
