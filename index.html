@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL adatbázis-kezelés</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>MySQL Oktatóoldal</h1>
+            <ul>
+                <li><a href="#fooldal">Főoldal</a></li>
+                <li><a href="#korlatozasok">Korlátozások</a></li>
+                <li><a href="#lekerdezesek">Lekérdezések</a></li>
+                <li><a href="#kapcsolat">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="fooldal">
+        <h2>MySQL adatbázis-kezelés alapjai</h2>
+        <p>
+            A weboldal célja a MySQL adatbázis-kezelési nyelv legfontosabb
+            elemeinek bemutatása rövid magyarázatokkal és gyakorlati példákkal.
+            Az oldalon megismerhetők a táblák létrehozásakor alkalmazható
+            korlátozások, valamint az alapvető adatkezelő lekérdezések működése.
+        </p>
+    </section>
+    <section id="korlatozasok">
+        <div class="container">
+            <h2>Táblákban alkalmazható korlátozások</h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <h3>PRIMARY KEY</h3>
+                    <p>
+                        A PRIMARY KEY egyedi azonosítót biztosít minden rekord számára.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>diak_id</th>
+                            <th>név</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kovács Anna</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nagy Péter</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>FOREIGN KEY</h3>
+                    <p>
+                        Kapcsolatot hoz létre két tábla között.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>kurzus_id</th>
+                            <th>diak_id</th>
+                            <th>kurzus_nev</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Webprogramozás</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>UNIQUE</h3>
+                    <p>
+                        Egy adott oszlopban nem lehet két azonos érték.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>név</th>
+                            <th>email</th>
+                        </tr>
+                        <tr>
+                            <td>Kovács Anna</td>
+                            <td>anna@email.hu</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>NOT NULL</h3>
+                    <p>
+                        Nem enged üres értéket megadni.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>DEFAULT</h3>
+                    <p>
+                        Alapértelmezett értéket ad egy mezőnek.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>név</th>
+                            <th>státusz</th>
+                        </tr>
+                        <tr>
+                            <td>Nagy Péter</td>
+                            <td>aktív</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>CHECK</h3>
+                    <p>
+                        Feltételt szab az adatok bevitelére.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>név</th>
+                            <th>életkor</th>
+                        </tr>
+                        <tr>
+                            <td>Kiss Dávid</td>
+                            <td>18</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="lekerdezesek">
+        <div class="container">
+            <h2>Lekérdezések típusai</h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <h3>INSERT</h3>
+                    <p>
+                        Új rekord hozzáadása az adatbázishoz.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>diak_id</th>
+                            <th>név</th>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tóth Réka</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>SELECT</h3>
+                    <p>
+                        Adatok lekérdezése az adatbázisból.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>név</th>
+                        </tr>
+                        <tr>
+                            <td>Kovács Anna</td>
+                        </tr>
+                        <tr>
+                            <td>Nagy Péter</td>
+                        </tr>
+                        <tr>
+                            <td>Tóth Réka</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>UPDATE</h3>
+                    <p>
+                        Meglévő adatok módosítása.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>DELETE</h3>
+                    <p>
+                        Adatok törlése az adatbázisból.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="kapcsolat">
+        <p>Készítette: Saját Név</p>
+        <p>MySQL projektmunka</p>
+        <p>2026</p>
+    </footer>
+</body>
+</html>
