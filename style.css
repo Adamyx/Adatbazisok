@@ -3,6 +3,12 @@ body {
     color: white;
 }
 
-@media screen (min-width: 20px) {
+@media (max-width: 576px) {
+    
+}
+@media (max-width: 768px){
+
+}
+@media (max-width: 1024px){
     
 }
